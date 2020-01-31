@@ -38,7 +38,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/favicon.ico", (req, res) => {
-    res.end();
+    res.status(204);
 });
 
 app.listen(process.env.PORT || 8000, () => {console.log(`running on port ${process.env.PORT || 8000}`)});
