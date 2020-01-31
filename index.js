@@ -5,6 +5,7 @@ const app = express();
 app.get("/", (req, res) => {
     var data = fs.readFileSync("./database.json", "utf-8");
     var content = JSON.parse(data);
+    console.log(content);
     var hashes = content["hashes"];
     var hash = hashes[Math.floor(Math.random() * hashes.length)];
     var used = content["used"];
